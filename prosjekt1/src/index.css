@@ -1,5 +1,62 @@
-.docview {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+* {
+    font-family: 'Roboto', sans-serif;;
 }
+
+header {
+    background-color: #454545;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.docview {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#doc > p{
+    font-size: 16px;
+}
+
+li {
+    text-align: left;
+    font-size: 16px;
+}
+
+
+footer {
+    background-color: #454545;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#container {
+    text-align: center;
+    height: 500px;
+    margin: auto;
+    display: flex;
+}
+
+#description {
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #bdbdbd;
+}
+
+.art {
+    margin: 10px;
+    width: 50%;
+
+}
+
+#svganimation:hover {
+    transform: rotate(60deg);
+}
+
+
+

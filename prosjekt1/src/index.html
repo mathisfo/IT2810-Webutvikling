@@ -6,24 +6,35 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 </head>
 <body>
     <header>
         <h1>Prosjekt 1</h1>
+        <p>A masterpiece made by the very famous artist Captain America</p>
     </header>
 
-    <div>
-        <h2>Canvas</h2>
-        <p>Larry Page satt og funderte på 90-tallet i en garasje over et selskap han ville starte. Lite visste han at 30 år senere skulle det bli et av verdens mest verdifulle selskaper.  </p>
-        <canvas id="viewpoint" width="250" height="250" style="border:1px solid #000000;"></canvas>
+    <div id="description">
+        <h2 style="text-align: left;">About Captain America</h2>
+        <p>Captain America, soon to be a legendary avenger, has started in the design industry. He is currently working on his insignia. The american inspired emblem covering his vibranium shield. He is currently experimenting with additional effects on his shield. Hover it took look at what he has been working on. </p></div>
+    
+    <div id="container">
+        
+        <div class="art">
+            <h2>Canvas</h2>
+            <canvas id="viewpoint" width="250" height="250"  onmouseout="mainState()" onmouseover="changecolor()"></canvas>
+        </div>
+
+        <div class="art" id="svganimation">
+            <h2>SVG</h2>
+            <object  id="svg" data="art.svg" ></object>
+        </div>
     </div>
 
-    <div>
-        <h2>SVG</h2>
-        <object id="svg" data="art.svg" type=""></object>
-    </div>
+
+    
 
 
     
@@ -31,11 +42,37 @@
         <div class="docview" id="switch">Click to see documentation</div>
         
         <div class="docview" id="doc">
-            <p>Dette prosjektet skal illusterere bruk av SVG og HTML Canvas for å etterligne Google logoen. Det er benyttet jQuery.
+            <h3>CSS Flexbox</h3>
+            <p>I opted for CSS flexbox because I chose to align my art pieces horizontally. I created two divs containing each art element and wrapped them in a container div. The art divs are inline elements ordered within the flexbox system. 
+            </p>
+
+            <h3>Canvas and SVG</h3>
+            <p>Canvas proved easier than SVG. I wrote a javascript function inspired by a mathematical equation found <a href="https://stackoverflow.com/questions/25837158/how-to-draw-a-star-by-using-canvas-html5">here</a>. However I was not able to write the same star in SVG. I decided to calculate the points of a polygon numerically based on the 250x250 viewpoint with (125,125) as origo. As a consequence, there is a slight mismatch, nonetheless within acceptable measures.
+                <br>
+                <br>
+            The animation for the Canvas is invoked by a javascript function that interchanges between two canvas renders. The animation applied on the SVG is a CSS transformation that rotates the SVG 60 degrees to the right.
+            </p>
+
+            <h3>jQuery</h3>
+            <p>jQuery enables fetching and manipulation of DOM elements. I used the slideToggle function to hide/show This documentation is shown and hidden with the slideToggle jQuery function. </p>
+
+            <h3>Cross-browser testing</h3>
+            <p>I have tested the website in Safari, Chrome and Opera. Expected behavior was shown across all platforms. The page is lacking responsive web design for very narrow viewpoints. I used Google Chromes interactive Responsive Web Design tool to check on different mobile phones and was satisfied with the result on tablets.</p>
+
+            <h3>Resources</h3>
+            <p>
+                <ul>
+                    <li>Mouse Events - https://www.w3schools.com/jsref/event_onmouseover.asp</li>
+                    <li>SVG Shapes - https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes/</li>
+                    <li>SVG Polygon - https://www.w3schools.com/graphics/svg_polygon.asp</li>
+                    <li>jQuery Sliding Methods - w3schools.com/jquery/jquery_slide.asp</li>
+                    <li>CSS Flexbox - https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+                </ul>
             </p>
         </div>
         
     </footer>
+
     <script src="canvas.js"></script>
     <script src="index.js"></script>
 </body>

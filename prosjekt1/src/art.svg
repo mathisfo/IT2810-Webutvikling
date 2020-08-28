@@ -1,5 +1,26 @@
-<svg height="250" width="250" xmlns="http://www.w3.org/2000/svg">
-    
-    <!-- RED -->
-    <path d="125 125 C 125 200 C 105 200 Z" fill="db3236" />
-</svg> 
+<svg height="250" width="250" xmlns="http://www.w3.org/2000/svg"> 
+
+    <circle cx="125" cy="125" r="105" fill="#db3236"/>
+    <circle cx="125" cy="125" r="85" fill="white"/>
+    <circle cx="125" cy="125" r="65" fill="#db3236"/>
+    <circle cx="125" cy="125" r="45" fill="#001a6e"/>
+
+    <polygon id="star" transform="rotate(0) translate(0 0)"
+
+        points = 
+        
+        "
+        125,80 
+        95,158
+        167,110
+        83,110
+        155,159
+        "
+
+
+
+        fill="white"
+        stroke="white"
+    ></polygon>
+
+</svg>
